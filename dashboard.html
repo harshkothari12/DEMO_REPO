@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-100">
+  <!-- Header -->
+  <header class="bg-white w-full p-4 shadow flex items-center justify-between">
+    <!-- User Info -->
+    <div class="relative inline-block text-left">
+      <!-- Trigger Button -->
+      <button id="dropdownButton" class="flex items-center gap-2 p-2 rounded-full hover:bg-gray-100 focus:outline-none">
+        <img src="./07fd4b021b913b8a47a365bfef36598790a687fe.jpg" alt="Profile" class="w-8 h-8 rounded-full" />
+        <span class="font-semibold">Dominique Ch.</span>
+        <i class="fas fa-chevron-down text-sm"></i>
+      </button>
+      <div id="dropdownMenu" class="hidden absolute left-8 mt-2 w-56 bg-white rounded-xl shadow-lg z-20">
+        <a href="#" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100">
+          <i class="fas fa-user text-gray-600"></i> My details
+        </a>
+        <a href="#" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100">
+          <i class="fas fa-calendar-alt text-gray-600"></i> My calendar
+        </a>
+        <a href="#" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100">
+          <i class="fas fa-umbrella-beach text-gray-600"></i> Vacations
+        </a>
+        <a href="#" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100">
+          <i class="fas fa-file-alt text-gray-600"></i> Corporate CV
+        </a>
+        <a href="#" class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100">
+          <i class="fas fa-rocket text-gray-600"></i> Performance review
+        </a>
+      </div>
+    </div>
+
+    <!-- Search -->
+    <div class="flex items-center gap-2 text-sm text-gray-500 mr-[auto] ml-[30px] cursor-pointer">
+      <img src="./search.png" alt="Search" class="w-5 h-5" />
+      <span>Quick search</span>
+    </div>
+
+    <!-- Notifications -->
+    <div class="relative">
+      <img src="./notifications.png" alt="Notifications" class="w-5 h-5 cursor-pointer" />
+      <span class="absolute top-0 right-0 block h-2 w-2 rounded-full bg-red-600 ring-2 ring-white"></span>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex p-5 gap-6 relative">
+<aside class="w-64 bg-white p-4 rounded-xl shadow text-sm font-medium text-gray-700">
+        <nav class="flex flex-col gap-2">
+          <a href="#" class="flex items-center gap-3 p-2 rounded hover:bg-gray-100"><img src="./dashboard.png" class="w-5 h-5" /> Dashboard</a>
+          <a href="./Find_person.html" class="flex items-center gap-3 p-2 rounded hover:bg-gray-100"><img src="./PO.png" class="w-5 h-5" /> People</a>
+          <a href="#" class="flex items-center gap-3 p-2 rounded hover:bg-gray-100"><img src="./assignment.png" class="w-5 h-5" /> Projects</a>
+          <a href="#" class="flex items-center gap-3 p-2 rounded hover:bg-gray-100"><img src="./_ionicons_svg_md-calendar.png" class="w-5 h-5" /> Calendar</a>
+          <a href="#" class="flex items-center gap-3 p-2 rounded hover:bg-gray-100"><img src="./_ionicons_svg_md-easel.png" class="w-5 h-5" /> Training</a>
+          <a href="#" class="flex items-center gap-3 p-2 rounded hover:bg-gray-100"><img src="./_ionicons_svg_md-hourglass.png" class="w-5 h-5" /> Timesheet</a>
+          <a href="#" class="flex items-center gap-3 p-2 rounded hover:bg-gray-100"><img src="./_ionicons_svg_md-chatbubbles.png" class="w-5 h-5" /> Reports</a>
+          <a href="#" class="flex items-center gap-3 p-2 rounded hover:bg-gray-100"><img src="./AS.png" class="w-5 h-5" /> Administration</a>
+          <a href="#" class="flex items-center gap-3 p-2 rounded hover:bg-gray-100"><img src="./people.png" class="w-5 h-5" /> Help</a>
+        </nav>
+      </aside>
+
+    <!-- Dashboard Widgets -->
+    <section class="flex flex-wrap gap-6">
+      <!-- Widget 1 -->
+      <div class="bg-white w-[472px] h-[472px] p-4 rounded shadow flex flex-col">
+        <h2 class="font-semibold text-lg mb-1">Company Facts</h2>
+        <p class="text-sm text-gray-500 mb-6">Employees</p>
+        <img src="./Diagrams.png" alt="Company Facts Chart" class="w-full object-contain mt-auto" />
+      </div>
+
+      <!-- Widget 2 -->
+      <div class="bg-white w-[472px] h-[472px] p-4 rounded shadow flex flex-col">
+        <h2 class="font-semibold text-lg mb-6">Statistics</h2>
+        <img src="./Widget 2.png" alt="Statistics Chart" class="w-full object-contain mt-auto" />
+      </div>
+    </section>
+
+    <!-- Add Widget Button -->
+    <div class="absolute top-5 right-5">
+      <button
+        class="flex items-center gap-2 px-5 py-2 bg-green-500 text-white rounded-full shadow hover:bg-green-600 transition text-sm">
+        <span class="text-lg">+</span>
+        <span>Add widget</span>
+      </button>
+    </div>
+
+    <div class="">
+      <div class="h-[120px] w-[120px] bg-blue-500"></div>
+    </div>
+  </main>
+</body>
+<script>
+  const dropdownButton = document.getElementById("dropdownButton");
+  const dropdownMenu = document.getElementById("dropdownMenu");
+
+  dropdownButton.addEventListener("click", () => {
+    dropdownMenu.classList.toggle("hidden");
+  });
+
+  // Optional: Hide dropdown when clicking outside
+  document.addEventListener("click", (e) => {
+    if (
+      !dropdownButton.contains(e.target) &&
+      !dropdownMenu.contains(e.target)
+    ) {
+      dropdownMenu.classList.add("hidden");
+    }
+  });
+</script>
+
+</html>
